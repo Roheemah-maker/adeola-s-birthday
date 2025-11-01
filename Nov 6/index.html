@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Birthday Celebration!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Welcome Modal -->
+    <div id="welcomeModal" class="modal welcome-modal">
+        <div class="modal-content welcome-content">
+            <div class="welcome-header">
+                <div class="welcome-avatar">🎂</div>
+                <h2>Welcome to My Birthday Party! 🎉</h2>
+            </div>
+            <p class="welcome-text">I'm so excited to celebrate with you! Please enter your name to join the fun!</p>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="userName" placeholder="Enter your awesome name..." maxlength="20">
+            </div>
+            <button id="enterSite" class="welcome-btn">
+                <span>Let's Celebrate!</span>
+                <i class="fas fa-party-horn"></i>
+            </button>
+            <div class="welcome-footer">
+                <p>November 6 - The Best Day Ever!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (initially hidden) -->
+    <div id="mainContent" class="hidden">
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="balloon" style="left: 20%; animation-delay: 1s;"></div>
+            <div class="balloon" style="left: 30%; animation-delay: 2s;"></div>
+            <div class="balloon" style="left: 40%; animation-delay: 3s;"></div>
+            <div class="balloon" style="left: 50%; animation-delay: 4s;"></div>
+            <div class="balloon" style="left: 60%; animation-delay: 5s;"></div>
+            <div class="balloon" style="left: 70%; animation-delay: 6s;"></div>
+            <div class="balloon" style="left: 80%; animation-delay: 7s;"></div>
+            <div class="balloon" style="left: 90%; animation-delay: 8s;"></div>
+            
+            <div class="confetti-piece" style="left: 15%; animation-delay: 0.5s;"></div>
+            <div class="confetti-piece" style="left: 25%; animation-delay: 1.5s;"></div>
+            <div class="confetti-piece" style="left: 35%; animation-delay: 2.5s;"></div>
+            <div class="confetti-piece" style="left: 45%; animation-delay: 3.5s;"></div>
+            <div class="confetti-piece" style="left: 55%; animation-delay: 4.5s;"></div>
+            <div class="confetti-piece" style="left: 65%; animation-delay: 5.5s;"></div>
+            <div class="confetti-piece" style="left: 75%; animation-delay: 6.5s;"></div>
+            <div class="confetti-piece" style="left: 85%; animation-delay: 7.5s;"></div>
+        </div>
+
+        <div class="container">
+            <header>
+                <h1>It's My Birthday!</h1>
+                <div class="birthday-date">November 6 - The Best Day of the Year!</div>
+                
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+                
+                <button class="confetti-button" id="confettiBtn">
+                    <i class="fas fa-sparkles"></i>
+                    Launch Confetti!
+                    <i class="fas fa-sparkles"></i>
+                </button>
+                
+                <div class="piñata-container">
+                    <div class="piñata" id="pinata">
+                        <div class="piñata-body">
+                            <div class="piñata-decoration"></div>
+                            <div class="piñata-decoration"></div>
+                            <div class="piñata-decoration"></div>
+                        </div>
+                        <div class="piñata-string"></div>
+                    </div>
+                    <p class="piñata-label">Click the Piñata!</p>
+                </div>
+            </header>
+
+            <section class="section">
+                <h2 class="section-title">All About Me</h2>
+                <div class="about-me">
+                    <div class="profile-pic">
+                        <div class="avatar">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p>Hello! I'm so excited to celebrate my birthday with you! I love fun times, good friends, and creating amazing memories.</p>
+                        <p>This website is my special birthday project to share the joy with everyone!</p>
+                        
+                        <div class="fun-facts">
+                            <div class="fact-card">
+                                <div class="fact-icon"><i class="fas fa-gamepad"></i></div>
+                                <h3>CODM Player</h3>
+                                <p>I love Call of Duty Mobile!</p>
+                            </div>
+                            <div class="fact-card">
+                                <div class="fact-icon"><i class="fas fa-music"></i></div>
+                                <h3>Music Lover</h3>
+                                <p>Always listening to my favorite tunes!</p>
+                            </div>
+                            <div class="fact-card">
+                                <div class="fact-icon"><i class="fas fa-mug-hot"></i></div>
+                                <h3>Garri Fanatic</h3>
+                                <p>Could drink garri all day!</p>
+                            </div>
+                            <div class="fact-card">
+                                <div class="fact-icon"><i class="fas fa-cat"></i></div>
+                                <h3>Cat Lover</h3>
+                                <p>Cats are my favorite animals!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                <section class="section">
+    <h2 class="section-title">My Birthday Playlist</h2>
+    <div class="playlist">
+        <div class="song" data-song="whosbeen">
+            <span class="song-icon"><i class="fas fa-music"></i></span>
+            <span class="song-title">Who's Been On Your Mind - Zak Leever</span>
+            <span class="play-indicator"><i class="fas fa-play"></i></span>
+        </div>
+        <div class="song" data-song="adunni">
+            <span class="song-icon"><i class="fas fa-music"></i></span>
+            <span class="song-title">Adunni - Rybeena ft. Joeboy</span>
+            <span class="play-indicator"><i class="fas fa-play"></i></span>
+        </div>
+        <div class="song" data-song="spaghetti">
+            <span class="song-icon"><i class="fas fa-music"></i></span>
+            <span class="song-title">Spaghetti - Rybeena</span>
+            <span class="play-indicator"><i class="fas fa-play"></i></span>
+        </div>
+        <div class="song" data-song="you">
+            <span class="song-icon"><i class="fas fa-music"></i></span>
+            <span class="song-title">You - Fola</span>
+            <span class="play-indicator"><i class="fas fa-play"></i></span>
+        </div>
+        <div class="song" data-song="fun">
+            <span class="song-icon"><i class="fas fa-music"></i></span>
+            <span class="song-title">Fun - Rema</span>
+            <span class="play-indicator"><i class="fas fa-play"></i></span>
+        </div>
+        <div class="song" data-song="withyou">
+            <span class="song-icon"><i class="fas fa-music"></i></span>
+            <span class="song-title">With You - Escaladizzy X JMK</span>
+            <span class="play-indicator"><i class="fas fa-play"></i></span>
+        </div>
+    </div>
+    <audio id="audioPlayer" controls style="display: none;"></audio>
+    <div class="audio-note">
+        <i class="fas fa-info-circle"></i>
+        <p>Click any song to play 🎵</p>
+    </div>
+</section>
+            <section class="section">
+                <h2 class="section-title">Birthday Quiz</h2>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h3>What's my favorite color?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" data-correct="false">Blue</div>
+                            <div class="quiz-option" data-correct="true">Pink</div>
+                            <div class="quiz-option" data-correct="false">Rainbow</div>
+                            <div class="quiz-option" data-correct="false">Green</div>
+                        </div>
+                    </div>
+                    <div class="quiz-question">
+                        <h3>How do I like my garri?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" data-correct="true">With cold water and sugar</div>
+                            <div class="quiz-option" data-correct="false">With hot water</div>
+                            <div class="quiz-option" data-correct="false">With milk</div>
+                            <div class="quiz-option" data-correct="false">Plain without anything</div>
+                        </div>
+                    </div>
+                    <div class="quiz-question">
+                        <h3>What's my favorite CODM game mode?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" data-correct="false">Battle Royale</div>
+                            <div class="quiz-option" data-correct="true">Team Deathmatch</div>
+                            <div class="quiz-option" data-correct="false">Search & Destroy</div>
+                            <div class="quiz-option" data-correct="false">Zombies</div>
+                        </div>
+                    </div>
+                    <div class="quiz-question">
+                        <h3>What would be my ideal birthday gift?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" data-correct="false">A new CODM skin</div>
+                            <div class="quiz-option" data-correct="false">Concert tickets</div>
+                            <div class="quiz-option" data-correct="false">Garri for a year</div>
+                            <div class="quiz-option" data-correct="true">A cat</div>
+                        </div>
+                    </div>
+                    <div class="quiz-question">
+                        <h3>Where would I rather celebrate?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" data-correct="false">Beach party</div>
+                            <div class="quiz-option" data-correct="true">CODM gaming session</div>
+                            <div class="quiz-option" data-correct="false">Movie marathon at home</div>
+                            <div class="quiz-option" data-correct="false">Amusement park</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz-results">
+                    <button id="submitQuiz" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Submit Answers!
+                    </button>
+                    <div id="quizScore" class="hidden"></div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Memory Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="./img/1.jpg" alt="Birthday memory">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/2.jpg" alt="Birthday memory">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/3.jpg" alt="Birthday memory">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/4.jpg" alt="Birthday memory">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/5.jpg" alt="Birthday memory">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/6.jpg" alt="Birthday memory">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/7.jpg" alt="Fun times">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/8.jpg" alt="Celebration">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/9.jpg" alt="Party time">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/10.jpg" alt="Friends">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/11.jpg" alt="More fun">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           <section class="section">
+    <h2 class="section-title">Send Birthday Wishes! 💌</h2>
+    
+    <div class="whatsapp-info">
+        <div class="whatsapp-header">
+            <i class="fab fa-whatsapp"></i>
+            <h3>Messages go directly to my WhatsApp!</h3>
+        </div>
+        <p>Write your message below and it will be sent directly to my phone via WhatsApp</p>
+    </div>
+    
+    <div class="message-form-container">
+        <div class="message-header">
+            <i class="fas fa-envelope-open-text"></i>
+            <h3>Write Your Message</h3>
+        </div>
+        <form class="message-form" id="messageForm">
+            <div class="form-group">
+                <label for="authorName">Your Name</label>
+                <input type="text" id="authorName" class="form-input" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="messageText">Your Birthday Message</label>
+                <textarea id="messageText" class="form-input" placeholder="Write your birthday message here... It will be sent to my WhatsApp!" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn message-submit">
+                <i class="fab fa-whatsapp"></i>
+                Send via WhatsApp!
+            </button>
+        </form>
+        
+        <div class="messages-container" id="messagesContainer">
+            <div class="message">
+                <div class="message-author">Birthday Bot 🎉</div>
+                <div class="message-text">Messages will appear here and be sent to my WhatsApp! All wishes will be private between you and me.</div>
+                <div class="message-time">Just now</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-heart">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p>Made with love for my birthday | November 6</p>
+                    <div class="footer-icons">
+                        <i class="fas fa-birthday-cake"></i>
+                        <i class="fas fa-gift"></i>
+                        <i class="fas fa-party-horn"></i>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Piñata Modal -->
+        <div id="pinataModal" class="modal hidden">
+            <div class="modal-content pinata-modal">
+                <span class="close-modal">&times;</span>
+                <div class="modal-header">
+                    <i class="fasfa-gift"></i>
+                    <h2>Piñata Surprise! 🎁</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="pinataMessage">You found a surprise!</p>
+                </div>
+                <button class="submit-btn modal-close">Yay! Continue Celebrating!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
